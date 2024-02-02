@@ -7,7 +7,7 @@ import {
     Line,
     StyleSheet 
 } from "@react-pdf/renderer"
-import Layout from "../layout"
+import Layout from "../PDF"
 import { useSelector } from "react-redux"
 
 const styles = StyleSheet.create({
@@ -15,13 +15,13 @@ const styles = StyleSheet.create({
         width: 794,
         height: 1122,
         backgroundColor: '#fff',
-        fontFamily: 'Helvetica'
+        // fontFamily: 'Helvetica'
         // padding: 20,
     },
     header: {
         width: '100%',
         textAlign: 'center',
-        paddingBottom: 5,
+        marginBottom: 300,
         backgroundColor: '#0C6BA0',
         opacity: 0.2
     },
@@ -32,11 +32,12 @@ const styles = StyleSheet.create({
     headerSubTitle: {
         fontSize: 18,
         paddingTop: 8,
+        paddingBottom: 200,
         opacity: 1
     },
     section: {
-        paddingLeft: 20,
-        paddingRight: 20,
+        paddingLeft: 40,
+        paddingRight: 40,
         paddingBottom: 15
     },
     sectionBody: {

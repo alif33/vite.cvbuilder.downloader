@@ -1,5 +1,6 @@
 import SyncLoader from "react-spinners/ClockLoader"
-export default function Spinner({isLoading}){
+
+export default function Spinner({ isLoading }){
     return(
         <div className="flex min-h-screen justify-center items-center">
             <div className="flex flex-col gap-5">

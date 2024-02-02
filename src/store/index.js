@@ -1,0 +1,24 @@
+import { configureStore } from "@reduxjs/toolkit"
+import { persistReducer, persistStore } from "redux-persist"
+import autoMergeLevel2 from "redux-persist/lib/stateReconciler/autoMergeLevel2"
+import storage from "redux-persist/lib/storage"
+import { rootReducer } from "./reducers"
+import { Information } from "./api"
+
+const persistConfig = {
+    key: 'root',
+    whitelist: [
+    //   'information', 
+    ],
+    storage,
+    stateReconciler: autoMergeLevel2
+}
+
+export const store = configureStore({ 
+    reducer: persistReducer(persistConfig, rootReducer),
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+        serializableCheck: false
+    }).concat(Information.middleware),
+})
+
+export const persistor = persistStore(store)

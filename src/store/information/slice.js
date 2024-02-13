@@ -38,34 +38,34 @@ export const informationSlice = createSlice({
     reducers: {
         setInfo: (state, action) => {
             const data = action.payload
-            console.log(data, "DATA")
-            state.heading.firstName = data?.info?.firstName || ""
-            state.heading.surName = data?.info?.surName || ""
-            state.heading.country = data?.info?.country || ""
-            state.heading.city = data?.info?.city || ""
-            state.heading.phone = data?.info?.phone || ""
-            state.heading.email = data?.info?.email || ""
+
+            state.heading.firstName = data?.firstName || ""
+            state.heading.surName = data?.surName || ""
+            state.heading.country = data?.country || ""
+            state.heading.city = data?.city || ""
+            state.heading.phone = data?.phone || ""
+            state.heading.email = data?.email || ""
             
-            if(data?.info?.experience.length>0){
-                const experience = parseJSON(data?.info?.experience)
+            if(data?.experience.length>0){
+                const experience = parseJSON(data?.experience)
                 if (experience) {
                     state.experience = experience
                 }
             }
 
-            if(data?.info?.education.length>0){
-                const education = parseJSON(data?.info?.education)
+            if(data?.education.length>0){
+                const education = parseJSON(data?.education)
                 if (education) {
                     state.education = education
                 }
             }
             
-            if(data?.info?.skills && data?.info?.skills.length>0){
-                state.skills = JSON.parse(data?.info?.skills)
+            if(data?.skills && data?.skills.length>0){
+                state.skills = JSON.parse(data?.skills)
             }
             
-            if(data?.info?.summary && data?.info?.summary.length>0){
-                state.summary = JSON.parse(data?.info?.summary)
+            if(data?.summary && data?.summary.length>0){
+                state.summary = JSON.parse(data?.summary)
             }
         },
     }

@@ -53,22 +53,7 @@ const MyDocument = () => (
             />
         </Svg>
         
-        {/* <View style={styles.section}>
-            <Text style={styles.header}>Curriculum Vitae</Text>
-            <Text style={styles.subHeader}>Personal Information:</Text>
-            <Text style={styles.content}>Name: Your Name</Text>
-            <Text style={styles.content}>Address: Your Address</Text>
-            <Text style={styles.content}>Email: your.email@example.com</Text>
-
-            <Text style={styles.subHeader}>Education:</Text>
-            <Text style={styles.content}>Degree in Computer Science - University XYZ</Text>
-            <Text style={styles.content}>Graduation Year: 2022</Text>
-
-            <Text style={styles.subHeader}>Work Experience:</Text>
-            <Text style={styles.content}>Software Developer - Company ABC</Text>
-            <Text style={styles.content}>Role: Full Stack Developer</Text>
-            <Text style={styles.content}>Duration: January 2020 - Present</Text>
-        </View> */}
+       
     </Page>
   </Document>
 );

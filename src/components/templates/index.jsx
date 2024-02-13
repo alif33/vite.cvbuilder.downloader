@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   });
 
 const MyDocument = () => {
-    const { heading, education } = useSelector(state=>state.information)
+    const { heading, education, experience, summary } = useSelector(state=>state.information)
 
 
     console.log(heading);

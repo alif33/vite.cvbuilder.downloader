@@ -3,8 +3,8 @@ import Alpha from "../templates/bita"
 import Bita from "../templates/bita"
 import Gama from "../templates/bita"
 import Delta from "../templates/bita"
-// import {}
 import { useSelector } from "react-redux"
+
 Font.register(
     { 
         family: 'Epilogue', 
@@ -67,15 +67,15 @@ const containerStyle = {
 }
 
 
-export default function PDF({ name }){
-    const { heading, experience, education, skills, summary } = useSelector(state=>state.information)
-    // console.log(props.name);
-    const Template = temps[`${name}`] || Alpha
+export default function PDF(){
+    const { templateName, heading, experience, education, skills, summary } = useSelector(state=>state.information)
+    const Template = temps[`${templateName}`] || Alpha
 
-    console.log(experience, "EX");
+
+    console.log(heading, "HEAD");
+
+
     return(
-
-        // <h1>Ismail h alif</h1>
         <PDFViewer style={containerStyle}>
             <Template
                 heading={heading}

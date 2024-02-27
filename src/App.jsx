@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Verify from "./pages/verify";
 import Editor from "./pages/editor";
 import NotFound from "./pages/notFound";
@@ -8,7 +8,7 @@ import Cv2 from "./pages/CV2";
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route path="/download/:_id" element={<Verify />} />
         <Route path="/editor" element={<Editor />} />
@@ -17,7 +17,7 @@ function App() {
         <Route path="/cv2" element={<Cv2 />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

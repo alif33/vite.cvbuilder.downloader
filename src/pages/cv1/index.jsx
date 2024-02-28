@@ -101,8 +101,8 @@ const containerStyle = {
 
 const CV1 = () => {
   return (
-    <div>
-      <PDFViewer style={containerStyle}>
+    // <div>
+    //   <PDFViewer style={containerStyle}>
         <Document>
           <Page size="A4" style={styles.page}>
             {/* LEFT SECTION */}
@@ -396,8 +396,8 @@ const CV1 = () => {
             </View>
           </Page>
         </Document>
-      </PDFViewer>
-    </div>
+    //   </PDFViewer>
+    // </div>
   );
 };
 

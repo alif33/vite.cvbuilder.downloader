@@ -7,7 +7,7 @@ import {
     Line,
     StyleSheet 
 } from "@react-pdf/renderer"
-import { NodeParser } from "../../../lib/nodeParser";
+import { NodeParser } from "../../lib/nodeParser";
 
 const styles = StyleSheet.create({
     page: {

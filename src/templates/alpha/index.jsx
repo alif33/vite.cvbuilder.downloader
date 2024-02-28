@@ -7,7 +7,7 @@ import {
     Line,
     StyleSheet 
 } from "@react-pdf/renderer"
-import { NodeParser } from "../../../lib/nodeParser";
+import { NodeParser } from "../../lib/nodeParser"
 
 const styles = StyleSheet.create({
     page: {
@@ -56,49 +56,49 @@ const styles = StyleSheet.create({
         fontSize: 11,
         lineHeight: 1.5
     }
-});
+})
 
 const processNodesForPDF = (nodes) => {
     return nodes.map((node, index) => {
       if (node.type === 'text') {
-        return <Text key={index}>{node.data}</Text>;
+        return <Text key={index}>{node.data}</Text>
       } else if (node.type === 'ul') {
         return (
           <View key={index}>
             {processNodesForPDF(node.data)}
           </View>
-        );
+        )
       } else if (node.type === 'li') {
         return (
           <Text key={index} style={{ marginLeft: 10 }}>
             {processNodesForPDF(node.data)}
           </Text>
-        );
+        )
       } else if (node.type === 'p') {
         return (
           <Text key={index}>
             {processNodesForPDF(node.data)}
           </Text>
-        );
+        )
       }else if(node.type === 'span'){
         return (
             <Text key={index}>
               {processNodesForPDF(node.data)}
             </Text>
-          );
+          )
       } else if (node.type === 'b') {
         // Add extra spaces after bold text
         return (
           <Text key={index}>
             <Text style={{ fontWeight: 'bold' }}>{processNodesForPDF(node.data)}</Text>{' '}
           </Text>
-        );
+        )
       } else if (node.type === 'i') {
         return <Text key={index} style={{ fontStyle: 'italic' }}>{processNodesForPDF(node.data)}</Text>;
       }
-      return null;
-    });
-  };
+      return null
+    })
+  }
   
 
 
@@ -106,8 +106,6 @@ export default function Bita({heading, experience, education, summary, skills}){
 
     const __summary = NodeParser(summary) || false
     
-    console.log(__summary, "SUM");
-
     return(
         <Document>
             <Page size="A4" style={styles.page}>

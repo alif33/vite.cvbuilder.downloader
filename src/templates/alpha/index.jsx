@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { 
     Document,
     Page, 
@@ -58,51 +59,9 @@ const styles = StyleSheet.create({
     }
 })
 
-const processNodesForPDF = (nodes) => {
-    return nodes.map((node, index) => {
-      if (node.type === 'text') {
-        return <Text key={index}>{node.data}</Text>
-      } else if (node.type === 'ul') {
-        return (
-          <View key={index}>
-            {processNodesForPDF(node.data)}
-          </View>
-        )
-      } else if (node.type === 'li') {
-        return (
-          <Text key={index} style={{ marginLeft: 10 }}>
-            {processNodesForPDF(node.data)}
-          </Text>
-        )
-      } else if (node.type === 'p') {
-        return (
-          <Text key={index}>
-            {processNodesForPDF(node.data)}
-          </Text>
-        )
-      }else if(node.type === 'span'){
-        return (
-            <Text key={index}>
-              {processNodesForPDF(node.data)}
-            </Text>
-          )
-      } else if (node.type === 'b') {
-        // Add extra spaces after bold text
-        return (
-          <Text key={index}>
-            <Text style={{ fontWeight: 'bold' }}>{processNodesForPDF(node.data)}</Text>{' '}
-          </Text>
-        )
-      } else if (node.type === 'i') {
-        return <Text key={index} style={{ fontStyle: 'italic' }}>{processNodesForPDF(node.data)}</Text>;
-      }
-      return null
-    })
-  }
-  
 
 
-export default function Bita({heading, experience, education, summary, skills}){
+export default function Alpha({ heading, experience, education, summary, skills }){
 
     const __summary = NodeParser(summary) || false
     

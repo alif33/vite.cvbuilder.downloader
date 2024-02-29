@@ -1,9 +1,8 @@
-import { PDFViewer, Font } from "@react-pdf/renderer"
+import { Font } from "@react-pdf/renderer"
 import Alpha from "./bita"
 import Bita from "../templates/bita"
 import Gama from "../templates/bita"
 import Delta from "../templates/bita"
-import { useSelector } from "react-redux"
 
 Font.register(
     { 
@@ -60,27 +59,19 @@ const temps = {
     delta: Delta,
 }
 
-
-const containerStyle = {
-    width: '100%',
-    height: '100vh'
-}
-
-
-export default function PDF(){
-    const { templateName, heading, experience, education, skills, summary } = useSelector(state=>state.information)
-    const Template = temps[`${templateName}`] || Alpha
+export default function Templates({  heading, experience, education, skills, summary }){
+    // const { templateName, heading, experience, education, skills, summary } = useSelector(state=>state.information)
+    // const Template = temps[`${templateName}`] || Alpha
+    const Template = Alpha
 
     return(
-        <PDFViewer style={containerStyle}>
-            <Template
-                heading={heading}
-                experience={experience}
-                education={education}
-                skills={skills}
-                summary={summary}
-            />
-        </PDFViewer>
+        <Template
+            heading={heading}
+            experience={experience}
+            education={education}
+            skills={skills}
+            summary={summary}
+        />
     )
 }
  

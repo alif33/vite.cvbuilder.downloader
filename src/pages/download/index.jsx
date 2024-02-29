@@ -37,7 +37,7 @@ const Download = () => {
     <div className="min-h-screen">
         <Header/>
         {
-          isLoading ? <h1>loading...</h1>: (
+          isLoading ? <div className="flex justify-center mt-44"><h1>loading...</h1></div>: (
             <div className="flex justify-center mt-44">
               <PDFDownloadLink document={<Template 
                 templateName={templateName}

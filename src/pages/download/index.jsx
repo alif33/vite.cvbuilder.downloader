@@ -7,7 +7,7 @@ import Header from '../../components/header'
 const App = () => (
   <div className="min-h-screen">
       <Header/>
-      <div className="flex justify-center mt-40">
+      <div className="flex justify-center mt-44">
         <PDFDownloadLink document={<CV />} fileName="somename.pdf">
           {({ loading }) => (loading ? <PulseLoader color="#36d7b7" /> : <Button>Download Pdf</Button>)}
         </PDFDownloadLink>

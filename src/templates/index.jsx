@@ -1,6 +1,8 @@
+/* eslint-disable react/prop-types */
 import { Font } from "@react-pdf/renderer"
 import Alpha from "./bita"
 import Bita from "../templates/bita"
+import Catalyst from "../templates/catalyst"
 import Gama from "../templates/bita"
 import Delta from "../templates/bita"
 
@@ -54,15 +56,14 @@ Font.register(
 const temps = {
     alpha: Alpha,
     bita: Bita,
-    // catalyst: Catalyst,
+    catalyst: Catalyst,
     gama: Gama,
     delta: Delta,
 }
 
-export default function Templates({  heading, experience, education, skills, summary }){
+export default function Templates({ templateName, heading, experience, education, skills, summary }){
     // const { templateName, heading, experience, education, skills, summary } = useSelector(state=>state.information)
-    // const Template = temps[`${templateName}`] || Alpha
-    const Template = Alpha
+    const Template = temps[`${templateName}`] || Alpha
 
     return(
         <Template

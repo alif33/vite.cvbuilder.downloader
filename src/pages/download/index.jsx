@@ -5,7 +5,7 @@ import PulseLoader from "react-spinners/PulseLoader"
 import Header from '../../components/header'
 
 import { useEffect, useState } from "react"
-import { useParams, useNavigate } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { useSelector, useDispatch } from "react-redux"
 import { setInfo } from "../../store/information/action"
 import { getResume } from "../../db/queries"

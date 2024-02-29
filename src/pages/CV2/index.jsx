@@ -8,9 +8,9 @@ import {
   Image,
   Text,
 } from "@react-pdf/renderer";
-import { avatar, email2, phone2 } from "../../assets/Images/Images";
+import { avatar, email2, phone2 } from "../../assets/Images/Images"
 
-const teal = "#00959C";
+const teal = "#00959C"
 
 const styles = StyleSheet.create({
   page: {

@@ -8,10 +8,8 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { useSelector, useDispatch } from "react-redux"
 import { setInfo } from "../../store/information/action"
-import { getResume } from "../../db/queries"
 import { doc, onSnapshot } from "firebase/firestore"
 import { db } from "../../db"
-
 
 const Download = () => {
   const [isLoading, setIsLoading] = useState(false)

@@ -4,6 +4,7 @@ import {
   Route 
 } from "react-router-dom"
 
+import Image from "./pages/image"
 import Editor from "./pages/editor"
 import Download from "./pages/download"
 import Preview from "./pages/preview"
@@ -14,6 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/image" element={<Image />} />
         <Route path="/editor" element={<Editor />} />
         <Route path="/getcv/:_id" element={<Download />} />
         <Route path="/preview/:name" element={<Preview />} />

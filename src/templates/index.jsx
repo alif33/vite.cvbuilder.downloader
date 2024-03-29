@@ -4,7 +4,7 @@ import Alpha from "./bita"
 import Bita from "../templates/bita"
 import Catalyst from "../templates/catalyst"
 import Gama from "../templates/bita"
-import Delta from "../templates/bita"
+import Delta from "../templates/delta"
 
 Font.register(
     { 

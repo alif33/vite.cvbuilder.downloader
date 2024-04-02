@@ -8,6 +8,10 @@ import Image from "./pages/image"
 import Editor from "./pages/editor"
 import Download from "./pages/download"
 import Preview from "./pages/preview"
+import Posts from "./pages/dashboard/posts"
+import AddPost from "./pages/dashboard/add-post"
+import ResumeExamples from "./pages/dashboard/resume-examples"
+import AddResumeExample from "./pages/dashboard/add-resume-example"
 import NotFound from "./pages/notFound"
 import Catalyst from "./templates/catalyst"
 
@@ -19,6 +23,10 @@ function App() {
         <Route path="/editor" element={<Editor />} />
         <Route path="/getcv/:_id" element={<Download />} />
         <Route path="/preview/:name" element={<Preview />} />
+        <Route path="/dashboard/posts" element={<Posts />} />
+        <Route path="/dashboard/add-post" element={<AddPost />} />
+        <Route path="/dashboard/resume-examples" element={<ResumeExamples />} />
+        <Route path="/dashboard/add-resume-example" element={<AddResumeExample />} />
         <Route path="/cat" element={<Catalyst />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

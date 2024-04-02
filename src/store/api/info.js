@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 export const Information = createApi({
   reducerPath: 'Information',
-  baseQuery: fetchBaseQuery({ baseUrl: "https://api.cvbuilder.pro/info" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "https://api.cvbuilder.pro/" }),
   tagTypes: ['info'],
   endpoints: (builder) => ({
     getInformation: builder.query({

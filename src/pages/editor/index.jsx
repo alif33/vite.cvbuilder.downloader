@@ -5,8 +5,6 @@ import "react-quill/dist/quill.snow.css"
 import conf from "../../config/react-quill"
 
 
-
-
 const mapDataToJSX = (data) => {
     return data.map((item, index) => {
       if (item.type === "span") {
